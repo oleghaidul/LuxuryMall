@@ -6,6 +6,7 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+gem 'pg'
 
 gem 'cancan'
 gem 'activeadmin'
@@ -15,7 +16,7 @@ gem 'json'
 gem 'execjs'
 gem 'therubyracer'
 gem 'haml'
-gem 'linecache19', '~> 0.5.13'
+# gem 'linecache19', '~> 0.5.13'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'devise'
 
