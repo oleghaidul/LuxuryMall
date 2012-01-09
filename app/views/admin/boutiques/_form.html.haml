@@ -1,0 +1,8 @@
+= semantic_form_for [:admin, @boutique] do |f|
+  = f.inputs "Basic" do
+    - if current_admin_user
+      =f.input :name
+      =f.input :phone
+      =f.input :address
+      =f.input :admin_user_id, :value => current_admin_user.id, :as => :hidden
+      =f.buttons

@@ -1,4 +1,11 @@
 LuxuryMall::Application.routes.draw do
+
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -30,8 +37,6 @@ LuxuryMall::Application.routes.draw do
     end
   end
 
-  resource :user_session
-  root :controller => "user_sessions", :action => "new" # optional, this just sets the root route
 
   # Sample resource route with sub-resources:
   #   resources :products do

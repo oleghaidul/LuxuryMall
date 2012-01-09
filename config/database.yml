@@ -14,8 +14,8 @@ development:
   reconnect: false
   database: LuxuryMall_development
   pool: 5
-  username: dnikitsin
-  password: nik1988
+  username: root
+  password: 
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
