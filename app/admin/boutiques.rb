@@ -11,6 +11,8 @@ ActiveAdmin.register Boutique do
   index do
     column :name
     column :phone
+    column :phone2
+    column :director
     column :address
     column "Owner", :admin_user
     default_actions

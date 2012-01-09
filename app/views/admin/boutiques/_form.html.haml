@@ -1,11 +1,10 @@
 = semantic_form_for [:admin, @boutique], :html => {:multipart => true} do |f|
   = f.inputs "Basic" do
-    - if current_admin_user
-      =f.input :name
-      =f.input :phone
-      =f.input :address
-      =f.input :phone2
-      =f.input :director
-      =f.input :image, :label => "Logo"
-      =f.input :admin_user_id, :value => current_admin_user.id, :as => :hidden
-      =f.buttons
+    =f.input :name
+    =f.input :phone
+    =f.input :phone2
+    =f.input :address
+    =f.input :director
+    =f.input :image, :label => "Logo"
+    =f.input :admin_user_id, :value => current_admin_user.id, :as => :hidden
+    =f.buttons
