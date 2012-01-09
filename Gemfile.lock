@@ -107,6 +107,7 @@ GEM
     multi_json (1.0.3)
     mysql2 (0.3.7)
     orm_adapter (0.0.5)
+    pg (0.12.2)
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
@@ -183,10 +184,10 @@ DEPENDENCIES
   haml
   jquery-rails
   json
-  linecache19 (~> 0.5.13)
   meta_search (>= 1.1.0.pre)
   mongrel (> 1.2pre)
   mysql2
+  pg
   rails (= 3.1.1)
   ruby-debug-base19x
   sass-rails (~> 3.1.4)
