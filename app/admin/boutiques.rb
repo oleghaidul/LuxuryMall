@@ -1,7 +1,7 @@
 ActiveAdmin.register Boutique do
 
 	controller do
-		before_filter :admin, :except => :index
+		before_filter :admin, :except => [:index, :new, :create]
 		def admin
 			@boutique = Boutique.find(params[:id])
 		end
