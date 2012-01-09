@@ -19,6 +19,7 @@ gem 'haml'
 # gem 'linecache19', '~> 0.5.13'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'devise'
+gem 'paperclip'
 
 
 group :development do

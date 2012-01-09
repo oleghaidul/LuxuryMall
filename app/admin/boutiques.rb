@@ -22,6 +22,11 @@ ActiveAdmin.register Boutique do
       simple_format boutique.phone
       simple_format boutique.address
     end
+    div do
+      if boutique.image?
+        image_tag boutique.image.url
+      end
+    end
   end
 
   form :partial => 'form'
