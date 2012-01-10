@@ -6,6 +6,8 @@ LuxuryMall::Application.routes.draw do
     end
   end
 
+  match ':id' => 'boutiques#show'
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

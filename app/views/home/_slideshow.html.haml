@@ -4,7 +4,7 @@
     -for bout in @boutiques
       .box
         %a
-          = link_to(image_tag(bout.image.url, :alt => bout.name), bout)
+          = link_to(image_tag(bout.image.url, :alt => bout.name), bout.url_bout)
 #slideshow
   =image_tag('image1.jpg', :class => 'active')
   =image_tag('image2.jpg')
