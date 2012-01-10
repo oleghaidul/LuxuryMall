@@ -11,7 +11,7 @@
 					%br/
 					= bout.address
 					%br/
-					= bout.phone
+					= my_number_to_phone(bout.phone, :area_code => true)
 					%br/
 					= link_to "map"
 			.clear

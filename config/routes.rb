@@ -1,5 +1,7 @@
 LuxuryMall::Application.routes.draw do
 
+  resources :boutiques
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config

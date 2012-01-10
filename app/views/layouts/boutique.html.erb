@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LuxuryMall</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= yield %>
+<%= render 'layouts/footer' %>
+
+<!-- this will work with any number of images -->
+<!-- set the active class on whichever image you want to show up as the default 
+(otherwise this will be the last image) -->
+
+
+</body>
+</html>
