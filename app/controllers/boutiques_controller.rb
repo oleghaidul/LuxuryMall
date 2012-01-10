@@ -7,7 +7,7 @@ class BoutiquesController < ApplicationController
   end
 
   def description
-  	
+  	@boutique = Boutique.find_by_url_bout(params[:id])
   end
 
   def load_bout

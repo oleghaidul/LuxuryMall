@@ -8,6 +8,7 @@ LuxuryMall::Application.routes.draw do
   
   match 'admin' => 'admin/dashboard#index'
   match ':id' => 'boutiques#show'
+  match ':id/description' => 'boutiques#description'
 
   ActiveAdmin.routes(self)
 
