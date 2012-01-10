@@ -3,7 +3,7 @@ class BoutiquesController < ApplicationController
 	before_filter :load_bout
 
   def show
-  	@boutique = Boutique.find_by_url_bout("?", params[:id])
+  	@boutique = Boutique.find_by_url_bout(params[:id])
   end
 
   def description
