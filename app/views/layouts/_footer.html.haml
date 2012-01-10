@@ -2,12 +2,12 @@
 	#footer_button
 		%div{:style => "padding-right:30px"}
 			Координаты & Контакты
-			%span{:style => "font-size:8px;"} &#9660;
+			%span
 	#footer_higher
 		#footer_content
 			-for bout in @boutiques
 				.footbox
-					= bout.name 
+					%strong= bout.name
 					%br/
 					= bout.address
 					%br/
