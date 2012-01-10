@@ -1,6 +1,10 @@
 LuxuryMall::Application.routes.draw do
 
-  resources :boutiques
+  resources :boutiques do
+    member do
+      get 'description'
+    end
+  end
 
   ActiveAdmin.routes(self)
 
