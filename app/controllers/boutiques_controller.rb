@@ -10,7 +10,7 @@ class BoutiquesController < ApplicationController
 
   def load_bout
   	@boutiques = Boutique.all
-  		@boutique = Boutique.find_by_url_bout(params[:bout]) 
+  	@boutique = Boutique.find_by_url_bout(params[:bout]) 
   end
 
 end

@@ -60,56 +60,12 @@
           %li
             %a{:href => "", :title => ""} Смотреть всё
     .catalog_items
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
-      .item_box
-        %a{:href => "", :title => ""}
-          =image_tag "item.png"
-          .price_txt Цена:
-          .price 3080 $
+      =20.times do
+        .item_box
+          %a{:href => "assets/item.png", :title => "", :rel => "lightbox-cats"}
+            =image_tag "item.png"
+            .price_txt Цена:
+            .price 3080 $
       .free_space  
 
 / end of content
