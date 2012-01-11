@@ -1,14 +1,10 @@
 LuxuryMall::Application.routes.draw do
 
-  resources :boutiques do
-    member do
-      get 'description'
-    end
-  end
+  resources :boutiques
   
   match 'admin' => 'admin/dashboard#index'
-  match ':id' => 'boutiques#show'
-  match ':id/description' => 'boutiques#description'
+  match ':bout' => 'boutiques#show', constraints: Filter
+  match ':bout/description' => 'boutiques#description', constraints: Filter
 
   ActiveAdmin.routes(self)
 
