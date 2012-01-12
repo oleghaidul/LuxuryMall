@@ -8,6 +8,8 @@ gem 'rails', '3.1.1'
 gem 'mysql2'
 gem 'pg'
 gem 'taps'
+gem 'annotate'
+gem 'populator'
 
 gem 'cancan'
 gem 'activeadmin'
@@ -40,6 +42,23 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :development do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'rspec-rails'
+  gem 'webrat'
+  gem 'capybara'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'database_cleaner'
+end
+gem 'factory_girl_rails'
+
+gem 'spork', '0.9.0rc9'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

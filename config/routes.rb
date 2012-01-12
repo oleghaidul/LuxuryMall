@@ -2,9 +2,12 @@ LuxuryMall::Application.routes.draw do
 
   resources :boutiques
   
-  match 'admin' => 'admin/dashboard#index'
-  match ':bout' => 'boutiques#show', constraints: Boutique
+  match ':bout' => 'boutiques#show', constraints: Boutique, :as => "bout"
   match ':bout/description' => 'boutiques#description', constraints: Boutique
+
+  match ':bout/:year' => 'boutiques#show', constraints: Season, :as => "year"
+
+  match ':bout/:year/:season' => 'boutiques#show', constraints: Year, :as => "season"
 
   ActiveAdmin.routes(self)
 

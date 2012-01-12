@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120110150435) do
+ActiveRecord::Schema.define(:version => 20120112190657) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -61,6 +61,59 @@ ActiveRecord::Schema.define(:version => 20120110150435) do
     t.integer  "image_file_size"
     t.datetime "image_uploaded_at"
     t.string   "url_bout"
+    t.boolean  "miltibrand"
+  end
+
+  create_table "brands", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "items", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "brand_id"
+    t.integer  "season_id"
+    t.string   "structure"
+    t.text     "description"
+    t.integer  "price"
+    t.integer  "discount"
+    t.string   "sex"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  create_table "pictures", :force => true do |t|
+    t.string   "name"
+    t.integer  "item_id"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "seasons", :force => true do |t|
+    t.integer  "boutique_id"
+    t.integer  "year"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sizes", :force => true do |t|
+    t.integer  "item_id"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|

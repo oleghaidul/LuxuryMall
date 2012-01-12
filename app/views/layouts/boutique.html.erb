@@ -7,13 +7,71 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= yield %>
+<div id="top">
+		<a href="/" title="">
+		<img src="/assets/logo.png" alt="" style="padding-left:50px;"/>
+		</a>
+		<div id="menu">
+			<ul>
+			<li><a href="">
+				КОЛЛЕКЦИЯ <%= year %>
+				<ul class="submenu">
+					<li><%= link_to "ЛЕТО", season_path(@boutique.url_bout,year,"summer") %></li>
+					<li><%= link_to "ОСЕНЬ", season_path(@boutique.url_bout,year,"autumn") %></li>
+					<li><%= link_to "ЗИМА", season_path(@boutique.url_bout,year,"winter") %></li>
+					<li><%= link_to "ВЕСНА", season_path(@boutique.url_bout,year,"spring") %></li>
+				</ul>
+				</a>
+			</li>
+			</ul>
+		</div>
+		<div class="social">
+			<ul>
+				<li>
+				<a href="http://www.facebook.com/" target="_blank">
+				<img alt="" src="/assets/facebook.png"/></a>
+				</li>
+				<li>
+				<a href="http://www.twitter.com/" target="_blank">
+				<img alt="" src="/assets/twitter.png"/></a>
+				</li>
+				<li>
+				<a href="http://www.youtube.com/" target="_blank">
+				<img alt="" src="/assets/youtube.png"/></a>
+				</li>
+			</ul>
+		</div>
+</div>
+<div id="content">
+	<div class="space">
+	</div>
+	<div id="left_pane">
+		<div class="logo">
+		<img alt="" src="/assets/zegna_logo.png"/></a>
+		</div>
+	<div class="vert_menu">
+	<% if content_for?(:categories) %>
+	  <div><%= yield(:categories) %></div>
+	<% end %>
+	</div>
+	</div>
+
+	<div id="catalog">
+		<div class="catalog_header">
+		<div class="catalog_name"><h1>Коллекция <%= year %></h1></div>
+		<div class="collections">
+		<ul>
+			<li><%= link_to "Коллекция #{current_year}", year_path(@boutique.url_bout,current_year) %></li>
+			<li><%= link_to "Коллекция #{current_year-1}", year_path(@boutique.url_bout,current_year-1) %></li>
+			<li><%= link_to "Коллекция #{current_year-2}", year_path(@boutique.url_bout,current_year-2) %></li>
+			<li><%= link_to "Коллекция #{current_year-3}", year_path(@boutique.url_bout,current_year-3) %></li>
+		</ul>
+		</div>
+		</div>
+		<%= yield %>
+	</div>
+	</div>
+</div>
 <%= render 'layouts/footer' %>
-
-<!-- this will work with any number of images -->
-<!-- set the active class on whichever image you want to show up as the default 
-(otherwise this will be the last image) -->
-
-
 </body>
 </html>
