@@ -1,0 +1,6 @@
+-if params[:season]
+	=render year.seasons.name(params[:season])
+-else
+	.catalog_items
+		=render year.items
+		.free_space

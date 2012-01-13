@@ -1,4 +1,11 @@
-class Year
+class Year < ActiveRecord::Base
+	belongs_to :boutique
+	has_many :seasons do
+		def name(season)
+			where(:name => season)
+		end
+	end
+	has_many :items, :through => :seasons
 	FILTER = ["winter", "spring", "autumn", "summer"]
 
   def self.matches?(request)

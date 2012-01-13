@@ -1,3 +1,8 @@
-.catalog_items
-  =render season.items
-  .free_space  
+-if params[:category]
+	.catalog_items
+		=render season.items.where(:category_id => params[:category])
+		.free_space
+-else
+	.catalog_items
+		=render season.items
+		.free_space

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120112190657) do
+ActiveRecord::Schema.define(:version => 20120113094626) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -102,12 +102,16 @@ ActiveRecord::Schema.define(:version => 20120112190657) do
   end
 
   create_table "seasons", :force => true do |t|
-    t.integer  "boutique_id"
+    t.integer  "year_id"
     t.integer  "year"
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "seasons", ["name", "year_id"], :name => "index_seasons_on_name_and_year_id", :unique => true
+  add_index "seasons", ["name"], :name => "index_seasons_on_name"
+  add_index "seasons", ["year_id"], :name => "index_seasons_on_year_id"
 
   create_table "sizes", :force => true do |t|
     t.integer  "item_id"
@@ -133,5 +137,16 @@ ActiveRecord::Schema.define(:version => 20120112190657) do
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
   add_index "users", ["reset_password_token"], :name => "index_users_on_reset_password_token", :unique => true
+
+  create_table "years", :force => true do |t|
+    t.string   "name"
+    t.integer  "boutique_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "years", ["boutique_id"], :name => "index_years_on_boutique_id"
+  add_index "years", ["name", "boutique_id"], :name => "index_years_on_name_and_boutique_id", :unique => true
+  add_index "years", ["name"], :name => "index_years_on_name"
 
 end

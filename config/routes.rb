@@ -1,13 +1,16 @@
 LuxuryMall::Application.routes.draw do
 
+
   resources :boutiques
   
   match ':bout' => 'boutiques#show', constraints: Boutique, :as => "bout"
   match ':bout/description' => 'boutiques#description', constraints: Boutique
 
-  match ':bout/:year' => 'boutiques#show', constraints: Season, :as => "year"
+  match ':bout/:year' => 'boutiques#show_year', constraints: Season, :as => "year"
 
-  match ':bout/:year/:season' => 'boutiques#show', constraints: Year, :as => "season"
+  match ':bout/:year/:season' => 'boutiques#show_season', constraints: Year, :as => "season"
+
+  match ':bout/:year/:season/:category' => 'boutiques#show_category', constraints: Category, :as => "category"
 
   ActiveAdmin.routes(self)
 
