@@ -3,7 +3,7 @@ class Boutique < ActiveRecord::Base
 	FILTER = Boutique.select(:url_bout).map(&:url_bout)
 
 	belongs_to :admin_user
-	has_many :years do
+	has_many :seasons do
 		def name(year)
 			where(:name => year)
 		end

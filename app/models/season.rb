@@ -1,5 +1,6 @@
 class Season < ActiveRecord::Base
 	has_many :items
+	belongs_to :boutique
 
 	FILTER = ["winter", "spring", "autumn", "summer"]
 
