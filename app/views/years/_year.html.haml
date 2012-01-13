@@ -1,6 +1,11 @@
 -if params[:season]
 	=render year.seasons.name(params[:season])
 -else
-	.catalog_items
-		=render year.items
-		.free_space
+	-if params[:category]
+		.catalog_items
+			=render year.items.where(:category_id => Category.find_by_name(params[:category]).id)
+			.free_space
+	-else
+		.catalog_items
+			=render year.items
+			.free_space

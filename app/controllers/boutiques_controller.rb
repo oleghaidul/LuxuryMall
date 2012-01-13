@@ -11,18 +11,8 @@ class BoutiquesController < ApplicationController
 
   def load_bout
   	@boutiques = Boutique.all
-    @categories = Category.all
+    @categories = Category.limit(4)
     @brands = Brand.all
-  end
-
-  def show_year
-    @boutique = Boutique.find_by_url_bout(params[:bout])
-    render :show
-  end
-
-  def show_season
-    @boutique = Boutique.find_by_url_bout(params[:bout])
-    render :show
   end
   
 end

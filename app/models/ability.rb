@@ -9,6 +9,8 @@ class Ability
         can :manage, :all
       when "editor"
         can :manage, Boutique, :admin_user_id => user.id
+        can :manage, Item, :admin_user_id => user.id
+        cannot :namage, Category
 
 
       end
