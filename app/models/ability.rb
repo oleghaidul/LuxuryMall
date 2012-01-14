@@ -10,7 +10,9 @@ class Ability
       when "editor"
         can :manage, Boutique, :admin_user_id => user.id
         can :manage, Item, :admin_user_id => user.id
-        cannot :namage, Category
+        can :manage, Brand, :admin_user_id => user.id
+        can :manage, Category, :admin_user_id => user.id
+        cannot :namage, [Picture, Season, AdminUser, Size, User]
 
 
       end

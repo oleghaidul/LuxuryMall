@@ -10,6 +10,7 @@ gem 'pg'
 gem 'taps'
 gem 'annotate'
 gem 'populator'
+gem 'kaminari'
 
 gem 'cancan'
 gem 'activeadmin'
@@ -27,8 +28,8 @@ gem 'paperclip'
 
 group :development do
   gem 'mongrel', '>1.2pre'
-  gem "ruby-debug-base19x"
-  gem "ruby-debug-base19x"
+  # gem "ruby-debug-base19x"
+  # gem "ruby-debug-base19x"
 end
 
 gem 'sass-rails',   '~> 3.1.4'

@@ -1,4 +1,6 @@
 ActiveAdmin.register Picture do
+  controller.authorize_resource
+  
   index do
   	column :id
     column :name

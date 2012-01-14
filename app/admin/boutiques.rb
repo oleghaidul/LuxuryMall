@@ -32,6 +32,7 @@ ActiveAdmin.register Boutique do
     end
   end
 
+
   form :partial => 'form'
 
 
