@@ -89,10 +89,10 @@ GEM
     erubis (2.7.0)
     execjs (1.2.13)
       multi_json (~> 1.0)
-    factory_girl (2.4.0)
+    factory_girl (2.3.2)
       activesupport
-    factory_girl_rails (1.5.0)
-      factory_girl (~> 2.4.0)
+    factory_girl_rails (1.4.0)
+      factory_girl (~> 2.3.0)
       railties (>= 3.0.0)
     fastercsv (1.5.4)
     ffi (1.0.11)
@@ -255,7 +255,7 @@ DEPENDENCIES
   database_cleaner
   devise
   execjs
-  factory_girl_rails
+  factory_girl_rails (= 1.4.0)
   haml
   jquery-rails
   json
