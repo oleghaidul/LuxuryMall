@@ -15,7 +15,7 @@ gem 'kaminari'
 gem 'cancan'
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
-gem 'best_in_place'
+gem 'mercury-rails'
 
 gem 'json'
 gem 'execjs'
@@ -25,7 +25,6 @@ gem 'haml'
 gem 'authlogic', :git => 'git://github.com/odorcicd/authlogic.git', :branch => 'rails3'
 gem 'devise'
 gem 'paperclip'
-gem 'tinymce-rails'
 
 
 group :development do

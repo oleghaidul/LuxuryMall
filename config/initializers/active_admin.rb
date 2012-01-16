@@ -38,6 +38,8 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the controller.
   config.authentication_method = :authenticate_admin_user!
+  config.register_javascript 'tiny_mce/jquery.tinymce.js'
+  config.register_javascript 'active_admin_custom.js'
 
 
   # == Current User

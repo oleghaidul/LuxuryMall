@@ -9,6 +9,12 @@ class BoutiquesController < ApplicationController
   def description
     @boutique = Boutique.find_by_url_bout(params[:bout])
     render :layout => "description"
+    if params[:content]
+      @boutique.description = params[:content][:page_content][:value]
+      @boutique.save!
+      render text: ""
+      return
+    end
   end
 
   def load_bout
@@ -16,5 +22,6 @@ class BoutiquesController < ApplicationController
     @categories = Category.limit(4)
     @brands = Brand.all
   end
+
   
 end

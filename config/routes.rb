@@ -1,5 +1,7 @@
 LuxuryMall::Application.routes.draw do
-  
+  Mercury::Engine.routes
+
+
   resources :home do
     member do
       get 'home'
@@ -15,11 +17,13 @@ LuxuryMall::Application.routes.draw do
   match ':bout' => 'boutiques#show', constraints: Boutique, :as => "bout"
   match ':bout/description' => 'boutiques#description', constraints: Boutique
 
-  match ':bout/:year' => 'boutiques#show', constraints: Season, :as => "year"
+  #match ':bout/:year' => 'boutiques#show', constraints: Season, :as => "year"
 
-  match ':bout/:year/:season' => 'boutiques#show', :as => "season"
+  #match ':bout/:year/:season' => 'boutiques#show', :as => "season"
 
-  resources :boutiques
+  resources :boutiques do
+    member { post :mercury_update }
+  end
 
   # controller :boutiques do
   #   scope '/', :name_prefix => 'category_with_year_and_season' do
