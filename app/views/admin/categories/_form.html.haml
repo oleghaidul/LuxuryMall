@@ -1,5 +1,5 @@
-= semantic_form_for [:admin, @boutique], do |f|
-  = f.inputs "Basic" do
+= semantic_form_for [:admin, @category] do |f|
+  = f.inputs do
     =f.input :name
     =f.input :admin_user_id, :value => current_admin_user.id, :as => :hidden
     =f.buttons

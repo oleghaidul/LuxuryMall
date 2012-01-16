@@ -2,12 +2,10 @@ ActiveAdmin.register Item do
 
 	index do
     column :name
-    column "Owner", :admin_user
-    column :category
-    column :brand
-    column :season
+    column :category, :sortable => false
+    column :brand, :sortable => false
+    column :season, :sortable => false
     column :structure
-    column :description
     column :price
     column :discount
     column :sex

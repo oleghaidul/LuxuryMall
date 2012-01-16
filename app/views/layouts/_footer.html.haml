@@ -5,7 +5,7 @@
 			%span
 	#footer_higher
 		#footer_content
-			-for bout in @boutiques
+			-for bout in Boutique.all
 				.footbox
 					%strong= bout.name
 					%br/
