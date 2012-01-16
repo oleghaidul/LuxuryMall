@@ -6,4 +6,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.purr
+//= require best_in_place
+//= require tinymce-jquery
 //= require_tree .
+
+$(document).ready(function() {
+  /* Activating Best In Place */
+  $(".best_in_place").best_in_place();
+});

@@ -19,6 +19,8 @@ LuxuryMall::Application.routes.draw do
 
   match ':bout/:year/:season' => 'boutiques#show', :as => "season"
 
+  resources :boutiques
+
   # controller :boutiques do
   #   scope '/', :name_prefix => 'category_with_year_and_season' do
   #     scope :path => '/:boutique', constraints: Boutique, :as => :boutique do

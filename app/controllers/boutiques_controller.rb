@@ -1,5 +1,5 @@
 class BoutiquesController < ApplicationController
-	layout "boutique"
+	layout "boutique", :except => :description
 	before_filter :load_bout
 
   def show 
@@ -7,6 +7,8 @@ class BoutiquesController < ApplicationController
   end
 
   def description
+    @boutique = Boutique.find_by_url_bout(params[:bout])
+    render :layout => "description"
   end
 
   def load_bout

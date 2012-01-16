@@ -19,4 +19,12 @@ ActiveAdmin.register AdminUser do
     f.buttons
   end
 
+  controller do
+    def create
+      super do
+        AdminUser.add_user
+      end
+    end
+  end
+
 end
